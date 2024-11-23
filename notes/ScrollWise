@@ -1,0 +1,20 @@
+1. User Input Capabilities
+  1.1 Text Input: The application must allow users to input notes via text. This functionality should be simple, intuitive, and easily accessible within the app's interface.
+  1.2 Voice Input: Users must be able to input notes via voice. The app should utilize a speech-to-text system to convert spoken input into written notes.
+  1.3 Future Consideration - Image Recognition: Although not part of the initial release, the application should be designed with extensibility in mind to allow future integration of image recognition capabilities.
+2. AI-Enhanced Note Quality
+  2.1 Note Refinement: The application should leverage AI to process user-inputted notes, improving their quality and structure. The AI should be capable of transforming raw, unstructured inputs into clear, concise, and reusable notes.
+3. Note Categorization and Timestamping
+  3.1 Categorization: The application must allow users to categorize their notes into either predefined categories or custom categories created by the user.
+  3.2 Timestamps: Each note must be automatically timestamped with the date and time of its creation, allowing for chronological organization and tracking.
+4. Spaced Repetition and Quizzing
+  4.1 AI-Driven Quizzes: The application should utilize an AI-powered spaced repetition system to quiz users on their notes periodically. The frequency of these quizzes should be optimized for long-term retention.
+  4.2 Quiz Customization: Users must have the option to customize the frequency and timing of quizzes based on their preferences.
+5. Native Notification Integration
+  5.1 Notifications: The application must integrate with the device's native notification system to deliver quiz reminders and other relevant alerts.
+6. Quiz History and Archiving
+  6.1 Recent Quiz Tracking: The application should keep a record of the most recent quizzes up to a certain configurable threshold (e.g., last 30 days).
+  6.2 Archiving/Deletion: Old quizzes, beyond the configured threshold, should be either archived into a database for future reference or deleted based on user preferences.
+7. Source Linking
+  7.1 Source Attribution: Users must have the option to link their notes to an original source (e.g., a webpage, video, or document).
+  7.2 Source-Based Quizzing: The application should be capable of quizzing users on the sources of their notes, reinforcing the connection between content and its origin.

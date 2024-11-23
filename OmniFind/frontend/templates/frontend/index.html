@@ -1,0 +1,15 @@
+{% extends "frontend/base.html" %} {% block content %}
+
+<div class="container">
+  <div class="form-container">
+
+    <form id="root"></form>
+
+  </div>
+</div> 
+
+{% if debug %}
+<script type="module" src="http://localhost:5173/src/main.tsx"></script>
+{% else %}
+<script type="module" src="/src/main.tsx"></script>
+{% endif %} {% endblock %}

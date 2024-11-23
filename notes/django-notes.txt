@@ -1,0 +1,15 @@
+### Django API
+
+1) model.objects.all() - returns a query set
+2) model.objects.filter() - to filter a query set, returns a query set
+    filter(some_field=value)
+    to access certain methods for the some_field, we can use a double underscore such as
+    filter(some_field__some_property=value), how instead of some_field, a specific property is used.
+3) model.objects.get() - returns an object
+    get(pk=value) or get(id=value), here id can be any unique identifier field
+4) model_instance.custom_method()
+5) model1.model2_set.all() - returns a query set of model2 objects that have model1 as their foreign key
+6) model1.model2_set.create(**kwargs) - creates and returns a model2 instance and sets model1 as its foreign key
+7) model.delete() - deletes the model from the data base
+
+

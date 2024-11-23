@@ -1,0 +1,5 @@
+Pipfile
+Pipfile.lock
+node_modules
+pylintrc
+pyrightconfig.json

@@ -1,0 +1,62 @@
+Two ways of creating react app 1)Create React App 2)Vite (faster)
+command: npm create vite@latest
+command: npm i
+After installing run the following to start the server
+commadn: npm run dev
+
+Components conventionally go inside a special folder named 'components'
+  A component can only return one element. To get around this we can import
+  Fragment from react (import { Fragment } from "react";)
+  <Fragment> ... buncch of elelments ... </Fragment>
+  or use <></> as a short cut without the need to import
+
+Javascript trick to write concise elements
+  true && "second element" = "second element"
+  false && "second element" = false (which can also sometimes act as null)
+  example:
+    { items.length == 0 && <p>No list items</p> } -> this renders nothing if items = 0 or <p> otherwise
+  
+
+In react, local variables created inside functions/components can not be referenced from the returned
+  react component tree. In order to bypass this problem, import useState from 'react'.This returns
+  an array of two elements of of which the first one stands for the local variable and the second one
+  is the updating function. The updating function is does not have to be defined, it is a simple setter.
+  example:
+    const [selectedIndex, setSelectedIndex] = useState(-1 /* initial value to be passed to selectedIndex */)
+    In the tree ...
+    <li ... onClick={() => { setSelectedIndex(index /* passed through mapping */)}}>{ item }</li>
+
+
+When designing components, it may be desireable to create a dynamic way of assinging variables and populating
+  components. For this, interfaces can be used. They are similar to c/c++ structs and are known as objects in js.
+  example:
+  // define a prop
+  interface Prop {
+    items: string[];
+    heading: string;
+    onSelect: (item:string) => void;
+  }
+
+  // define a component
+  function ListGroup(props: Prop) { ... } // to access items and heading, use props.items
+  function ListGroup({ items, heading, onSelect }) { ... } // a better alternative
+
+  // in another file when using it where items is defined
+  const handleClick = (item: string) => { console.log(item) }
+  <ListGroup items={items} heading="Cities" onSelect={handleClick} />
+
+
+Sometimes you would like to pass text, components, html nodes, etc in the following format
+  // desired format
+  <MyComponent> components, txt, etc go here </MyComponent>
+  // undesired format
+  <MyComponent text="this can get long" />
+
+  In order to be able to do that, we redifine Prop as follows
+  interface Prop {
+    children: string;
+    // or children: ReactNode; to use React DOM nodes (import { ReactNode } from 'react')
+  }
+
+
+

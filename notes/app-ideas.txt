@@ -1,0 +1,5 @@
+AI powered memorization tool:
+  - People record their voice and AI will have the power to auto correct whenever they make a mistake
+
+AI powered study/recall app:
+  - Made with the aim to help people retain information on a daily scale
